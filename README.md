@@ -86,4 +86,5 @@ To-do list:
 
 ## License
 
+This is where I'd put my license... IF I HAD ONE!  
 This project uses the following license: [<license_name>](<link>).
