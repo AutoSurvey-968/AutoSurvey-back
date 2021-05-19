@@ -8,7 +8,8 @@
 * IO Service - Email management
 * Analytics Service - Aggregate and filtered data analytics
 
-![image](https://user-images.githubusercontent.com/83471833/118720806-11014380-b7f8-11eb-9852-323c2604a825.png)
+![image](https://user-images.githubusercontent.com/83471833/118834725-69841f80-b890-11eb-881d-5b5bf76ef454.png)
+
 
 
 ## Technologies Used
