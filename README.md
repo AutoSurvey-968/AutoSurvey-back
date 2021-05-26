@@ -1,11 +1,13 @@
 # AutoSurvey-back
 
-## A reactive Java back-end project for the automatic management of surveys. QC team members can upload past QC data (in CSV format) to the database, generate surveys for associates to take, and view analytics on the collected survey responses. Associates will be able to complete surveys and submit their responses to the database. This project is developed and deployed as a series of microservices:  
+## A reactive Java back-end project for the automatic management of surveys. QC team members can upload past QC data (in CSV format) to the database, generate surveys for associates to take, and view analytics on the collected survey responses. Associates will be able to complete surveys and submit their responses to the database. This project was developed and deployed using a distributed architecture that includes the following microservices:  
 * Gateway Service - Spring Cloud Gateway, Pipeline and Jenkins deployment
+  - Discovery Service - Eureka integration
+  - Config Service - 
 * User Service - User authentication, Firebase Management, User Database
 * Survey Service - Manages and stores survey information
 * Submission Service - CSV and JSON (standard) response data management
-* IO Service - Email management
+* IO Service - Email management (sending survey links to batch members)
 * Analytics Service - Aggregate and filtered data analytics
 
 ![image](https://user-images.githubusercontent.com/83471833/118834725-69841f80-b890-11eb-881d-5b5bf76ef454.png)
@@ -16,24 +18,42 @@
 
 * Java - SE1.8
 * Spring Boot Maven
+  - Surefire plugin
 * Spring Boot Starter - 2.4.5
   - Webflux
   - AOP
-  - Test
+  - Web
+  - Mail
   - Security
+  - Actuator
+  - Test
+  - DevTools
+* Spring Reactor
+  - Test
+* Spring Cloud
+  - Gateway
+  - Eureka
+* Spring Boot Cassandra
+* Firebase - 7.1.0
+* Commons Validator - 1.4.1
+* Commons Lang3 - 3.12.0
+* Javax Mail - 1.6.2
+* SpringFox Swagger - 2.9.2
+* Docker
 * SonarCloud
+* Jacoco - 0.8.4
 * Lombok
 * Slf4J - 1.7.30
-* Spring Boot Cassandra
-* 
+* Karate - 1.0.1
 
 
 ## Features
 
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* QC team members can generate Surveys for associates to complete based on a previous format, or create a new survey format for special weeks.
+* QC team members can email the survey link to all associates within the batch as part of the AutoSurvey service.
+* QC team members can view reactively generated analytics for both aggregate and filtered datasets.
+* Associates are able to anonymously submit their completed survey responses.
+* Google Firebase, in conjunction with Spring Security, is used to verify user authentication for protected routes.
 
 To-do list:
 * Wow improvement to be done 1
@@ -42,13 +62,7 @@ To-do list:
 ## Getting Started
    
 `git clone https://github.com/AutoSurvey-968/AutoSurvey-back`  
-(include all environment setup steps)
-
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
-
-- All the `code` required to get started
-- Images of what it should look like
+* Set up an Amazon Web Services (AWS) IAM user with programmatic access and AmazonKeyspacesFullAccess policy attached. Then, generate security credentials for Amazon Keyspaces (for Apache Cassandra). SAVE THESE CREDENTIALS.  
 
 ## Usage
 
@@ -73,8 +87,9 @@ To-do list:
   - [Matilda Kerwin](https://github.com/Kerwinm12345) - Primary
   - [Christopher Morrison](https://github.com/cmorrison-rev)
   - [Nerijus Gelezinis](https://github.com/NGelezinis)
+  - [Robert Bierly](https://github.com/rnbiv45)
+  - [Arieh Gennello](https://github.com/MoldedPixels)
 * IO Service Team
-  - [Austin Withers](https://github.com/AustinWithers) - Primary
   - [Richard Schaber](https://github.com/rjschaber)
 * Analytics Service Team
   - [Austin Withers](https://github.com/AustinWithers) - Primary
@@ -84,6 +99,11 @@ To-do list:
   - [Stephanie Tallman](https://github.com/sctallman) - Primary
   - [Benjamin Wood](https://github.com/lwood-benjamin)
   - [Tony Touma](https://github.com/Chielo9513)
+* Front End Team
+  - [Christopher Morrison](https://github.com/cmorrison-rev) - Primary
+  - [Robert Bierly](https://github.com/rnbiv45)
+  - [Richard Schaber](https://github.com/rjschaber)
+  - [Kevin Rose](https://github.com/Kevinrose235)
 
 ## License
 
