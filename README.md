@@ -10,7 +10,7 @@
 * IO Service - Email management (sending survey links to batch members)
 * Analytics Service - Aggregate and filtered data analytics
 
-![image](https://user-images.githubusercontent.com/83471833/118834725-69841f80-b890-11eb-881d-5b5bf76ef454.png)
+![image](https://github.com/AutoSurvey-968/AutoSurvey-back/blob/main/Project3-final.png)
 
 
 
