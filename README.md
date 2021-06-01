@@ -12,8 +12,6 @@
 
 ![image](https://github.com/AutoSurvey-968/AutoSurvey-back/blob/main/Project3-final.png)
 
-
-
 ## Technologies Used
 
 * Java - SE1.8
@@ -56,7 +54,7 @@
 * Google Firebase, in conjunction with Spring Security, is used to verify user authentication for protected routes.
 
 To-do list:
-* Wow improvement to be done 1
+* Implement message queueing to improve loose-coupling of services.
 * Wow improvement to be done 2
 
 ## Getting Started
@@ -66,7 +64,70 @@ To-do list:
 
 ## Usage
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action. 
+
+## Users Service Routes  
+
+```
+/users
+```  
+**POST** request to add a QC member as a user. ADMIN only.  
+**PUT** request to log in.  
+**GET** request to retrieve a list of users; optional query param to get a specific user by email. ADMIN only.  
+**DELETE** request to log out.  
+
+```
+/users/id
+```  
+**GET** request which retrieves the table of all users by ID. ADMIN only.  
+
+```
+/users/{id}
+```  
+**GET** request to retrieve a specific user by ID. ADMIN only.  
+**PUT** request to update a specific user by ID. ADMIN only.  
+**DELETE** request to remove a specific user by ID. ADMIN only.  
+
+```
+/users/{id}/password
+```  
+**PUT** request to update user password.  
+
+## Surveys Service Routes  
+
+```
+/surveys
+```  
+**GET** request to retrieve a list of all pre-constructed surveys.  
+**POST** request to create a new survey from JSON. ADMIN only.  
+
+```
+/surveys/{id}
+```  
+**GET** request to retrieve a specific survey by ID.  
+**PUT** request to update a specific survey by ID. ADMIN only.  
+**DELETE** request to remove a specific survey by ID. ADMIN only.  
+
+## Submissions Service Routes  
+
+```
+/responses
+```  
+**GET** request to retrieve all responses. ADMIN only.  
+**POST** request to submit response data as JSON or CSV file. CSV route is ADMIN only.  
+
+```
+/responses/{id}
+```  
+**PUT** request to update a specific response by ID. ADMIN only.  
+**DELETE** request to remove a specific response by ID. ADMIN only.  
+
+## Analytics Service Routes  
+
+```
+/reports
+```  
+**GET** request to retrieve a data report by query param: survey ID. Optional params include week and batch. ADMIN only.  
 
 ## Contributors
 
@@ -100,12 +161,9 @@ To-do list:
   - [Benjamin Wood](https://github.com/lwood-benjamin)
   - [Tony Touma](https://github.com/Chielo9513)
 * Front End Team
-  - [Christopher Morrison](https://github.com/cmorrison-rev) - Primary
-  - [Robert Bierly](https://github.com/rnbiv45)
+  - [Robert Bierly](https://github.com/rnbiv45) - Primary  
   - [Richard Schaber](https://github.com/rjschaber)
   - [Kevin Rose](https://github.com/Kevinrose235)
-
-## License
-
-This is where I'd put my license... IF I HAD ONE!  
-This project uses the following license: [<license_name>](<link>).
+  - [Albert Magpoc](https://github.com/albert-magpoc-revature)
+  - [Rashad Bowman](https://github.com/RashadCBowman)
+  - [Michael Chan](https://github.com/chanmic)
