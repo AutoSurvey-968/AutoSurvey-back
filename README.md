@@ -62,6 +62,8 @@ To-do list:
 `git clone https://github.com/AutoSurvey-968/AutoSurvey-back`  
 * Set up an Amazon Web Services (AWS) IAM user with programmatic access and AmazonKeyspacesFullAccess policy attached. Then, generate security credentials for Amazon Keyspaces (for Apache Cassandra). SAVE THESE CREDENTIALS.  
 
+**Full backend setup in [STARTUP.md](https://github.com/AutoSurvey-968/AutoSurvey-back/blob/main/STARTUP.md)**
+
 ## Usage
 
 > Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action. 
