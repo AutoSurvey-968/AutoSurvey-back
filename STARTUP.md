@@ -40,4 +40,4 @@ Lombok is a library that automatically generates getters, setters, toStrings, ha
 * [IO Service](https://github.com/AutoSurvey/AutoSurvey-IO-Service/blob/main/README.md)
 
 ## Docker
-(add later)
+(add later) :)
