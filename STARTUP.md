@@ -41,6 +41,7 @@ Lombok is a library that automatically generates getters, setters, toStrings, ha
 1. Make sure all environmental variables for each service is set, along with two others: `TRUSTSTORE_ENCODED` and `CREDENTIALS_JSON_ENCODED`.
    1. These variables' values need to be the cassandra truststore and the firebase credentials encoded by base64 respectively.
    2. To get these values, open the BASH terminal and use this command: `base 64 {file_name}` to get each encoded value.
+      * EX: For the truststore: `base 64 cassandra_truststore.jsk`.
 2. The `EUREKA_URL` value should also be set to `http://discovery-service:8761/eureka`.
 3. Build the docker images using `docker build -t autosurvey/{service_name}-service .`.
    * EX: For the user service: `docker build -t autosurvey/user-service .`.
